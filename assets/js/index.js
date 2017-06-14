@@ -1,5 +1,5 @@
 'use strict';
 
-var h1 = document.getElementsByTagName("h1")[0];
-
-h1.innerText = h1.innerText + " Com JavaScript!"
+ReactDOM.render(React.createElement(
+  'h1', null, 'Olá mundo em React!'
+), document.getElementsByClassName('container')[0]);
