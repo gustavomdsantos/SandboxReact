@@ -19,4 +19,4 @@ Usagem
 ```
 node web.js
 ```
-2. Abra no seu navegador o endereço: http://localhost:9000
+2. Abra no seu navegador o endereço: http://localhost:6645
