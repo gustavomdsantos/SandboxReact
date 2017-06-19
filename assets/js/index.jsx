@@ -1,4 +1,4 @@
-var div_container = document.getElementsByClassName('container')[0];
+var div_root = document.getElementsByClassName('root')[0];
 
 const gustavo = {
   nome: 'Gustavo',
@@ -11,9 +11,17 @@ function exibeNomePessoa(pessoa) {
 
 function cumprimentar(pessoa) {
 	if (pessoa) {
-		return <h1>Olá, {exibeNomePessoa(pessoa)}!</h1>;
+		return (
+			<div className="container">
+				<h1>Olá, {exibeNomePessoa(pessoa)}!</h1>
+			</div>
+		);
 	}
-	return <h1>Olá, estranho.</h1>;
+	return (
+		<div className="container">
+			<h1>Olá, estranho.</h1>
+		</div>
+	);
 }
 
-ReactDOM.render(cumprimentar(gustavo), div_container);
+ReactDOM.render(cumprimentar(gustavo), div_root);

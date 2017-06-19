@@ -19,8 +19,12 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="root">
       <!-- O conteúdo desta div será gerenciado pelo React. -->
+      <div class="container-flexbox container-loader">
+          <p id="loading">Carregando...</p>
+          <div id="loader"></div>
+      </div>
     </div>
 
     <script src="assets/js/index.jsx" type="text/babel"></script>
