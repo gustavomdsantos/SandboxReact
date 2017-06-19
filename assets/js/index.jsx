@@ -13,7 +13,7 @@ function exibeNomePessoa(pessoa) {
  * Componente *funcional* React.
  * Renderiza uma mensagem de boas vindas para o nome passado como parâmetro.
  */
-class BemVindo extends React.Component {
+var BemVindo = React.createClass({
 
 	render() {
 		if (this.props.pessoa) {
@@ -29,7 +29,7 @@ class BemVindo extends React.Component {
 			</div>
 		);
 	}
-}
+});
 
 const elemento = <BemVindo pessoa={gustavo} />;
 
