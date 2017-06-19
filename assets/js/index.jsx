@@ -9,11 +9,15 @@ function exibeNomePessoa(pessoa) {
   return pessoa.nome + ' ' + pessoa.sobrenome;
 }
 
-function cumprimentar(pessoa) {
-	if (pessoa) {
+/**
+ * Componente *funcional* React.
+ * Renderiza uma mensagem de boas vindas para o nome passado como parâmetro.
+ */
+function BemVindo(props) {
+	if (props.pessoa) {
 		return (
 			<div className="container">
-				<h1>Olá, {exibeNomePessoa(pessoa)}!</h1>
+				<h1>Olá, {exibeNomePessoa(props.pessoa)}!</h1>
 			</div>
 		);
 	}
@@ -24,4 +28,6 @@ function cumprimentar(pessoa) {
 	);
 }
 
-ReactDOM.render(cumprimentar(gustavo), div_page);
+const elemento = <BemVindo pessoa={gustavo} />;
+
+ReactDOM.render(elemento, div_page);
