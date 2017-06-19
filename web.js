@@ -1,6 +1,6 @@
 var static = require('node-static');
 
-var _port = 9000;
+var _port = 6645;
 
 var file = new static.Server('./', {
     cache: 0,
