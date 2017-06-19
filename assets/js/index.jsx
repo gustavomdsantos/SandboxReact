@@ -1,4 +1,4 @@
-var div_root = document.getElementsByClassName('root')[0];
+var div_page = document.getElementsByClassName('page')[0];
 
 const gustavo = {
   nome: 'Gustavo',
@@ -24,4 +24,4 @@ function cumprimentar(pessoa) {
 	);
 }
 
-ReactDOM.render(cumprimentar(gustavo), div_root);
+ReactDOM.render(cumprimentar(gustavo), div_page);
