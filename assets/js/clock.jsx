@@ -7,6 +7,33 @@ class Relogio extends React.Component {
     this.state = {horarioAtual: new Date()};
   }
 
+  /**
+   * Seta um timer quando o Relogio é renderizado para a DOM pela primeira vez.
+   * Isto é chamado de "mounting" em React.
+   *
+   * @memberof Relogio
+   */
+  componentDidMount() {
+    this.taxaDeAtualizacao = setInterval(
+      () => this.fazTiqueTaque(),
+      1000
+    );
+  }
+
+  /**
+   * Limpa aquele timer sempre que a DOM produzida pelo Relogio é removida.
+   * Isto é chamado de "unmounting" em React.
+   *
+   * @memberof Relogio
+   */
+  componentWillUnmount() {
+    clearInterval(this.taxaDeAtualizacao);
+  }
+
+  fazTiqueTaque() {
+    this.setState({horarioAtual: new Date()});
+  }
+
   render() {
     return (
       <div className="container">
@@ -17,10 +44,4 @@ class Relogio extends React.Component {
   }
 }
 
-function tique() {
-  ReactDOM.render(
-    <Relogio />,
-    div_page);
-}
-
-setInterval(tique, 1000);
+ReactDOM.render(<Relogio />, div_page);
