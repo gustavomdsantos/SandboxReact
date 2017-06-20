@@ -14,7 +14,7 @@ class RelogioView extends React.Component {
    * @memberof RelogioView
    */
   componentDidMount() {
-    setInterval(() => this.fazTiqueTaque(), this.taxaDeAtualizacao);
+    this.setState({timerID: setInterval(() => this.fazTiqueTaque(), this.taxaDeAtualizacao)});
   }
 
   /**
@@ -24,7 +24,7 @@ class RelogioView extends React.Component {
    * @memberof RelogioView
    */
   componentWillUnmount() {
-    clearInterval(this.taxaDeAtualizacao);
+    clearInterval(this.state.timerID);
   }
 
   fazTiqueTaque() {
