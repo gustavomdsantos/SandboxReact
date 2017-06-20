@@ -1,32 +1,44 @@
-var div_page = document.getElementsByClassName('page')[0];
+class Index extends React.Component {
 
-function onClick$Relogio() {
+  rootNode = document.getElementsByClassName('page')[0];
 
-  ReactDOM.render(<Relogio />, div_page);
-}
+  constructor(props) {
+    super(props);
+  }
 
-function onClick$BemVindo() {
+  onClick$Relogio() {
 
-  const gustavo = {
-    nome: 'Gustavo',
-    sobrenome: 'Moraes'
-  };
+    ReactDOM.render(<Relogio />, this.rootNode);
+  }
 
-  ReactDOM.render(<BemVindo pessoa={gustavo} />, div_page);
-}
+  onClick$BemVindo() {
 
-function Index() {
+    const gustavo = {
+      nome: 'Gustavo',
+      sobrenome: 'Moraes'
+    };
 
-  return (
-    <div className="container">
-      <h1>SandboxReact</h1>
-      <p>Escolha no menu a mini-aplicação que deseja abrir:</p>
-      <div className="btn-group">
-        <button className="btn btn-default" onClick={onClick$Relogio}>Relogio</button>
-        <button className="btn btn-default" onClick={onClick$BemVindo}>BemVindo</button>
+    ReactDOM.render(<BemVindo pessoa={gustavo} />, this.rootNode);
+  }
+
+  render() {
+
+    return (
+      <div className="container">
+        <h1>SandboxReact</h1>
+        <p>Escolha no menu a mini-aplicação que deseja abrir:</p>
+        <div className="btn-group">
+          <button className="btn btn-default" onClick={this.onClick$Relogio}>
+            Relógio
+          </button>
+          <button className="btn btn-default" onClick={this.onClick$BemVindo}>
+            Bem Vindo
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-ReactDOM.render(<Index />, div_page);
+// Starta a aplicação
+ReactDOM.render(<Index />, document.getElementsByClassName('page')[0]);
