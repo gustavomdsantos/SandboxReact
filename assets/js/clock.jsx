@@ -2,6 +2,8 @@ var div_page = document.getElementsByClassName('page')[0];
 
 class Relogio extends React.Component {
 
+  taxaDeAtualizacao = 1000; // 1 segundo
+
   constructor(props) {
     super(props); // Todo componente-classe deve chamar o super com props.
     this.state = {horarioAtual: new Date()};
@@ -14,10 +16,7 @@ class Relogio extends React.Component {
    * @memberof Relogio
    */
   componentDidMount() {
-    this.taxaDeAtualizacao = setInterval(
-      () => this.fazTiqueTaque(),
-      1000
-    );
+    setInterval(() => this.fazTiqueTaque(), this.taxaDeAtualizacao);
   }
 
   /**
