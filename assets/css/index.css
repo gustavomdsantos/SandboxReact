@@ -56,9 +56,9 @@ h6,
 }
 #loader {
   z-index: 1;
-  border: 8px solid #f1f1f1;
+  border: 8px solid #E8EAF6; /* Indigo 50 */
   border-radius: 50%;
-  border-top: 8px solid #61dafb;
+  border-top: 8px solid #61dafb; /* React logo color */
   width: 64px;
   height: 64px;
   -webkit-animation: spin 1s linear infinite;
