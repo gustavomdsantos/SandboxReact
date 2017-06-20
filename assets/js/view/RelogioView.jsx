@@ -37,7 +37,7 @@ class RelogioView extends React.Component {
     return (
       <div className="container">
         <h1>Olá mundo!</h1>
-        <h2>Agora são {this.state.horarioAtual.toLocaleTimeString()}.</h2>
+        <h2>Agora são <HoraFormatadaView horario={this.state.horarioAtual}/>.</h2>
       </div>
     );
   }
