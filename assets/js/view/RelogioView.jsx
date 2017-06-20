@@ -6,7 +6,7 @@ class RelogioView extends React.Component {
 
   constructor(props) {
     super(props); // Todo componente-classe deve chamar o super com props.
-    this.state = {horarioAtual: new RelogioModel().relogio};
+    this.state = {horarioAtual: new RelogioModel()};
   }
 
   /**
@@ -30,7 +30,7 @@ class RelogioView extends React.Component {
   }
 
   fazTiqueTaque() {
-    this.setState({horarioAtual: new RelogioModel().relogio});
+    this.setState({horarioAtual: new RelogioModel()});
   }
 
   render() {

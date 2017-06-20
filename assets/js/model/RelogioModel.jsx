@@ -1,3 +1,6 @@
 class RelogioModel {
-  relogio = new Date();
+
+  constructor() {
+    return new Date();
+  }
 }
