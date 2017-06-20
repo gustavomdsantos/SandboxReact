@@ -46,10 +46,10 @@ class Index extends React.Component {
         <h1>SandboxReact</h1>
         <p>Escolha no menu a mini-aplicação que deseja abrir:</p>
         <div className="btn-group">
-          <button className="btn btn-default" onClick={this.onClick$Relogio}>
+          <button className="btn btn-primary" onClick={this.onClick$Relogio}>
             Relógio
           </button>
-          <button className="btn btn-default" onClick={this.onClick$BemVindo}>
+          <button className="btn btn-primary" onClick={this.onClick$BemVindo}>
             Bem Vindo
           </button>
         </div>
