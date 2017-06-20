@@ -1,12 +1,14 @@
 var div_page = document.getElementsByClassName('page')[0];
 
-function Relogio(props) {
-  return (
-    <div className="container">
-      <h1>Olá mundo!</h1>
-      <h2>Agora são {props.horarioAtual.toLocaleTimeString()}.</h2>
-    </div>
-  );
+class Relogio extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <h1>Olá mundo!</h1>
+        <h2>Agora são {this.props.horarioAtual.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
 }
 
 function tique() {
