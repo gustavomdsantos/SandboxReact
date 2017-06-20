@@ -23,23 +23,12 @@ requirejs.config({
       exports: "ReactDOM"
     }
   },
-  config: {
-    jsx: {
-      transformer: 'babel'
-    },
-    babel: {
-      presets: ["react", "es2015"],
-      sourceMaps: "inline", // see https://babeljs.io/docs/usage/api/#options
-      fileExtension: ".jsx" // Can be set to anything, like .es6 or .js. Defaults to .jsx
-    }
-  },
   map: {
     '*': {
       'css': 'lib/require/css.min',
-      'text': 'lib/require/text',
-      'jsx': 'lib/require/jsx'
+      'text': 'lib/require/text'
     }
   }
 });
 
-require(["jsx!view/relogio"]);
+require(["babel!text!view/relogio.jsx"]);
