@@ -12,7 +12,14 @@ class Index extends React.Component {
 
   onClick$Relogio() {
 
-    ReactDOM.render(<Relogio />, this.rootNode);
+    const relogioPage = (
+      <div>
+        <Relogio />
+        <VoltarView />
+      </div>
+    );
+
+    ReactDOM.render(relogioPage, this.rootNode);
   }
 
   onClick$BemVindo() {
@@ -22,7 +29,14 @@ class Index extends React.Component {
       sobrenome: 'Moraes'
     };
 
-    ReactDOM.render(<BemVindo pessoa={gustavo} />, this.rootNode);
+    const bemVindoPage = (
+      <div>
+        <BemVindo pessoa={gustavo} />
+        <VoltarView />
+      </div>
+    );
+
+    ReactDOM.render(bemVindoPage, this.rootNode);
   }
 
   render() {
