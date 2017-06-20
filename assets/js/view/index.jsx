@@ -12,31 +12,12 @@ class Index extends React.Component {
 
   onClick$Relogio() {
 
-    const relogioPage = (
-      <div>
-        <Relogio />
-        <VoltarView />
-      </div>
-    );
-
-    ReactDOM.render(relogioPage, this.rootNode);
+    ReactDOM.render(<Relogio />, this.rootNode);
   }
 
   onClick$BemVindo() {
 
-    const gustavo = {
-      nome: 'Gustavo',
-      sobrenome: 'Moraes'
-    };
-
-    const bemVindoPage = (
-      <div>
-        <BemVindo pessoa={gustavo} />
-        <VoltarView />
-      </div>
-    );
-
-    ReactDOM.render(bemVindoPage, this.rootNode);
+    ReactDOM.render(<BemVindo />, this.rootNode);
   }
 
   render() {
