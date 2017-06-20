@@ -4,6 +4,10 @@ class Index extends React.Component {
 
   constructor(props) {
     super(props);
+
+    // Este binding é necessário para que o `this.` funcione no retorno de chamada
+    this.onClick$Relogio = this.onClick$Relogio.bind(this);
+    this.onClick$BemVindo = this.onClick$BemVindo.bind(this);
   }
 
   onClick$Relogio() {
