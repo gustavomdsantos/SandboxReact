@@ -1,10 +1,3 @@
-var div_page = document.getElementsByClassName('page')[0];
-
-const gustavo = {
-  nome: 'Gustavo',
-  sobrenome: 'Moraes'
-};
-
 function exibeNomePessoa(pessoa) {
   return pessoa.nome + ' ' + pessoa.sobrenome;
 }
@@ -30,7 +23,3 @@ class BemVindo extends React.Component {
     );
   }
 }
-
-const elemento = <BemVindo pessoa={gustavo} />;
-
-ReactDOM.render(elemento, div_page);

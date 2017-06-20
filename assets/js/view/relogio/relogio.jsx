@@ -7,5 +7,3 @@ function Relogio() {
     </div>
   );
 }
-
-ReactDOM.render(<Relogio />, div_page);
