@@ -1,5 +1,3 @@
-var div_page = document.getElementsByClassName('page')[0];
-
 class RelogioView extends React.Component {
 
   taxaDeAtualizacao = 1000; // 1 segundo
@@ -35,12 +33,10 @@ class RelogioView extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="relogio">
         <h1>Olá mundo!</h1>
         <h2>Agora são <HoraFormatadaView horario={this.state.horarioAtual}/>.</h2>
       </div>
     );
   }
 }
-
-ReactDOM.render(<RelogioView />, div_page);
