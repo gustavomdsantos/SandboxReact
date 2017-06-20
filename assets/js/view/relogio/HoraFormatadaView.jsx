@@ -1,6 +1,11 @@
-class HoraFormatadaView extends React.Component {
+define ([
+  "react"
+], (React) => {
 
-  render() {
-    return <span>{this.props.horario.toLocaleTimeString()}</span>;
+  class HoraFormatadaView extends React.Component {
+
+    render() {
+      return <span>{this.props.horario.toLocaleTimeString()}</span>;
+    }
   }
-}
+});

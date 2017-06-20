@@ -1,11 +1,18 @@
-var div_page = document.getElementsByClassName('page')[0];
+define ([
+  "react",
+  "reactDOM",
+  "jsx!view/relogio/RelogioView"
+], (React, ReactDOM, RelogioView) => {
 
-function Relogio() {
-  return (
-    <div className="container">
-      <RelogioView />
-    </div>
-  );
-}
+  var div_page = document.getElementsByClassName('page')[0];
 
-ReactDOM.render(<Relogio />, div_page);
+  function Relogio() {
+    return (
+      <div className="container">
+        <RelogioView />
+      </div>
+    );
+  }
+
+  ReactDOM.render(<Relogio />, div_page);
+});

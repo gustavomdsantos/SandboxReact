@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="assets/css/index.css">
 
     <!-- React.js -->
-    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
-    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <!--<script src="https://unpkg.com/react@latest/dist/react.js"></script>-->
+    <!--<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>-->
     <!-- Load Babel -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>-->
   </head>
   <body>
     <div class="page">
@@ -27,9 +27,17 @@
       </div>
     </div>
 
-    <script src="assets/js/view/relogio/HoraFormatadaView.jsx" type="text/babel"></script>
-    <script src="assets/js/model/relogio/RelogioModel.jsx" type="text/babel"></script>
-    <script src="assets/js/view/relogio/RelogioView.jsx" type="text/babel"></script>
-    <script src="assets/js/view/relogio.jsx" type="text/babel"></script>
+    <!--<script src="assets/js/view/relogio/HoraFormatadaView.jsx" type="text/babel"></script>-->
+    <!--<script src="assets/js/model/relogio/RelogioModel.jsx" type="text/babel"></script>-->
+    <!--<script src="assets/js/view/relogio/RelogioView.jsx" type="text/babel"></script>-->
+    <!--<script src="assets/js/view/relogio.jsx" type="text/babel"></script>-->
+
+    <!-- RequireJS: -->
+    <script src="assets/js/lib/require.js"></script>
+    <!-- Your configuration file (loads all libs) -->
+    <script>require(['assets/js/config.js']);</script>
+
+    <!-- Run application -->
+    <!--<script>require(["jsx!view/relogio"])</script>-->
   </body>
 </html>
