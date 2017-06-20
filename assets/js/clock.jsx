@@ -1,11 +1,17 @@
 var div_page = document.getElementsByClassName('page')[0];
 
 class Relogio extends React.Component {
+
+  constructor(props) {
+    super(props); // Todo componente-classe deve chamar o super com props.
+    this.state = {horarioAtual: new Date()};
+  }
+
   render() {
     return (
       <div className="container">
         <h1>Olá mundo!</h1>
-        <h2>Agora são {this.props.horarioAtual.toLocaleTimeString()}.</h2>
+        <h2>Agora são {this.state.horarioAtual.toLocaleTimeString()}.</h2>
       </div>
     );
   }
@@ -13,7 +19,7 @@ class Relogio extends React.Component {
 
 function tique() {
   ReactDOM.render(
-    <Relogio horarioAtual={new Date()} />,
+    <Relogio />,
     div_page);
 }
 
