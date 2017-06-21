@@ -10,16 +10,22 @@ class VoltarView extends React.Component {
   };
 
   onClick$renderIndex() {
+    this.props.ativa = false;
     ReactDOM.render(<Index />, document.getElementsByClassName('page')[0]);
   }
 
   render() {
-    return (
-      <div className="container-voltar" style={this.div_style}>
-        <a style={this.a_style} onClick={this.onClick$renderIndex}>
-          Voltar ao menu principal
-        </a>
-      </div>
-    );
+    if (this.props.ativa) {
+      return (
+        <div className="container-voltar" style={this.div_style}>
+          <a style={this.a_style} onClick={this.onClick$renderIndex}>
+            Voltar ao menu principal
+          </a>
+        </div>
+      );
+    }
+    else {
+      return null;
+    }
   }
 }

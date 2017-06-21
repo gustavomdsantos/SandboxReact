@@ -12,7 +12,6 @@ function BemVindo(props) {
   return (
     <div className="container">
       <BemVindoView pessoa={gustavo} />
-      <VoltarView />
     </div>
   );
 }

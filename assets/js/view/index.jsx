@@ -1,9 +1,11 @@
 class Index extends React.Component {
 
-  rootNode = document.getElementsByClassName('page')[0];
+  rootNode = document.getElementsByClassName('mini-app')[0];
 
   constructor(props) {
     super(props);
+
+    this.state = {isSubMenu: false}; // seta estado inicial de tela
 
     // Este binding é necessário para que o `this.` funcione no retorno de chamada
     this.onClick$Relogio = this.onClick$Relogio.bind(this);
@@ -13,16 +15,19 @@ class Index extends React.Component {
 
   onClick$Relogio() {
 
+    this.setState({isSubMenu: true});
     ReactDOM.render(<Relogio />, this.rootNode);
   }
 
   onClick$BemVindo() {
 
+    this.setState({isSubMenu: true});
     ReactDOM.render(<BemVindo />, this.rootNode);
   }
 
   onClick$Aviso() {
 
+    this.setState({isSubMenu: true});
     ReactDOM.render(<Aviso />, this.rootNode);
   }
 
@@ -30,19 +35,10 @@ class Index extends React.Component {
 
     return (
       <div className="container">
-        <h1>SandboxReact</h1>
-        <p>Escolha no menu a mini-aplicação que deseja abrir:</p>
-        <div className="btn-group">
-          <button className="btn btn-primary" onClick={this.onClick$Relogio}>
-            Relógio
-          </button>
-          <button className="btn btn-primary" onClick={this.onClick$BemVindo}>
-            Bem Vindo
-          </button>
-          <button className="btn btn-primary" onClick={this.onClick$Aviso}>
-            Aviso
-          </button>
+        <div className="mini-app">
+          <IndexView />
         </div>
+        <VoltarView ativa={this.state.isSubMenu}/>
       </div>
     );
   }
