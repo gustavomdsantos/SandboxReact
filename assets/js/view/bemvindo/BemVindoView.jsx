@@ -25,9 +25,8 @@ class BemVindoView extends React.Component {
   }
 
   render() {
-    if (this.props.pessoa.nome) {
-      return <h1>Olá, {this.exibeNomePessoa(this.props.pessoa)}!</h1>;
-    }
-    return <h1>Olá, estranho.</h1>;
+    var _pessoa = this.props.pessoa;
+
+    return <h1>Olá, {_pessoa.nome ? this.exibeNomePessoa(_pessoa) : "estranho"}!</h1>;
   }
 }
