@@ -15,7 +15,7 @@ class VoltarView extends React.Component {
 
   render() {
     return (
-      <div className="voltarView" style={this.div_style}>
+      <div className="container-voltar" style={this.div_style}>
         <a style={this.a_style} onClick={this.onClick$renderIndex}>
           Voltar ao menu principal
         </a>
