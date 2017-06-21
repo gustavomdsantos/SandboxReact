@@ -1,18 +1,12 @@
 class BemVindoView extends React.Component {
 
   /** Esqueleto de objeto que deve ser passado como parâmetro. */
-  props = {
-    pessoa: {
-      nome: "",
-      sobrenome: ""
-    }
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.props = props;
-  }
+  // props = {
+  //   pessoa: {
+  //     nome: "",
+  //     sobrenome: ""
+  //   }
+  // }
 
   exibeNomePessoa(pessoa) {
     var texto = "";
