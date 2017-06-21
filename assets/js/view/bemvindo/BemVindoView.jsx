@@ -15,11 +15,17 @@ class BemVindoView extends React.Component {
   }
 
   exibeNomePessoa(pessoa) {
-    return pessoa.nome + ' ' + pessoa.sobrenome;
+    var texto = "";
+    pessoa.sobrenome ? (
+      texto = pessoa.nome + ' ' + pessoa.sobrenome
+    ) : (
+      texto = pessoa.nome
+    )
+    return texto;
   }
 
   render() {
-    if (this.props.pessoa) {
+    if (this.props.pessoa.nome) {
       return <h1>Olá, {this.exibeNomePessoa(this.props.pessoa)}!</h1>;
     }
     return <h1>Olá, estranho.</h1>;
